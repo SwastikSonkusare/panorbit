@@ -41,7 +41,7 @@
     cursor: pointer;
 }
 
-.profile {
+.user {
     display: flex;
     align-items: center;
     padding: 1rem 0;
@@ -51,13 +51,13 @@
 }
 
 
-.profile__image {
+.user__image {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
 }
 
-.profile__text {
+.user__text {
     color: #6f6f6f;
 }
 
