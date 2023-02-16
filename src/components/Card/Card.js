@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
 
 import "./Card.css";
@@ -6,19 +8,26 @@ import "./Card.css";
 const Card = () => {
   const [user, setUser] = useState([]);
   const [loading, setLoading] = useState();
+  const navigate = useNavigate();
 
   const fetchUsers = async () => {
     setLoading(true);
 
-    const { data } = await axios.get("https://panorbit.in/api/users.json");
+    const {
+      data: { users },
+    } = await axios.get("https://panorbit.in/api/users.json");
     setLoading(false);
 
-    setUser(data.users);
+    setUser(users);
   };
 
   useEffect(() => {
     fetchUsers();
   }, []);
+
+  const profilePage = (d) => {
+    navigate("/profile", { state: d });
+  };
 
   return (
     <div className="card">
@@ -26,7 +35,7 @@ const Card = () => {
       <div className="card__container">
         {!loading &&
           user.map((d, i) => (
-            <div key={i} className="user">
+            <div key={i} className="user" onClick={() => profilePage(d)}>
               <img src={d.profilepicture} alt="" className="user__image"></img>
               <h3 className="user__text">{d.name}</h3>
             </div>
