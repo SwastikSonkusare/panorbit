@@ -9,12 +9,12 @@ import "./Profile.css";
 const Profile = () => {
   const location = useLocation();
 
-  console.log(location.state.name);
+  // console.log(location.state.name);
 
   return (
     <div className="profile">
       <Sidebar />
-      <About />
+      <About data={location} />
     </div>
   );
 };

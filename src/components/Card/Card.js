@@ -35,9 +35,13 @@ const Card = () => {
       <div className="card__container">
         {!loading &&
           user.map((d, i) => (
-            <div key={i} className="user" onClick={() => profilePage(d)}>
-              <img src={d.profilepicture} alt="" className="user__image"></img>
-              <h3 className="user__text">{d.name}</h3>
+            <div key={i} className="person" onClick={() => profilePage(d)}>
+              <img
+                src={d.profilepicture}
+                alt=""
+                className="person__image"
+              ></img>
+              <h3 className="person__name">{d.name}</h3>
             </div>
           ))}
       </div>

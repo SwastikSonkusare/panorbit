@@ -1,0 +1,25 @@
+.map-container {
+    width: 100%;
+    height: 40vh;
+}
+
+.coords {
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+}
+
+.coords div {
+    display: flex;
+    /* grid-gap: 1rem; */
+    margin-left: 1rem;
+}
+
+.coords div h5 {
+    color: #c4c4c4;
+}
+
+.coords div small {
+    color: #656565;
+    font-weight: bold;
+}

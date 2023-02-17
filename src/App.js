@@ -11,12 +11,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 //   );
 // };
 
+const Posts = () => {
+  return <div>Coming soon</div>;
+};
+
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Card />} />
         <Route path="/profile" exact element={<Profile />} />
+        <Route path="/posts" exact element={<Posts />} />
+        <Route path="/gallery" exact element={<Posts />} />
+        <Route path="/todo" exact element={<Posts />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,4 +1,4 @@
-navbar {
+.navbar {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,7 +7,7 @@ navbar {
     border-radius: 1.2rem;
 }
 
-navbar ul {
+.navbar__list {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@ navbar ul {
     position: relative;
 }
 
-navbar ul li {
+.navbar__items {
     display: flex;
     font-size: 1.3rem;
     text-align: left;
@@ -28,7 +28,7 @@ navbar ul li {
     cursor: pointer;
 }
 
-navbar ul li div.active {
+.navbar__items div.active {
     position: absolute;
     right: 0;
     width: 25px;
@@ -39,18 +39,18 @@ navbar ul li div.active {
 }
 
 
-/* navbar li.active {
+/* nav li.active {
     background-color: #fefeff;
    
 } */
 
-navbar ul li a {
+.navbar__items a {
     color: #fefeff;
     text-decoration: none;
 
 }
 
-navbar ul li div.active::after {
+.navbar__items div.active::after {
     content: ">";
     font-family: bold;
     color: #cdd3df;

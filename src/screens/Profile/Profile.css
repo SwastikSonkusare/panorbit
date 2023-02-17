@@ -1,10 +1,12 @@
 .profile {
     display: grid;
-    grid-template-columns: 20rem auto;
-    grid-gap: 10px;
-    height: 45rem;
-    position: absolute;
+    grid-template-columns: .4fr 2fr;
+    grid-gap: 2rem;
+    height: 42rem;
+    max-width: 90rem;
+    margin: auto;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); */
 }
