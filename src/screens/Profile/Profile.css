@@ -5,6 +5,7 @@
     height: 42rem;
     max-width: 90rem;
     margin: auto;
+    position: relative;
     /* position: absolute;
     top: 50%;
     left: 50%;

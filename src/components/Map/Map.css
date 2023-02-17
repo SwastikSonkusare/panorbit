@@ -11,15 +11,18 @@
 
 .coords div {
     display: flex;
-    /* grid-gap: 1rem; */
+    grid-gap: .5rem;
+    font-size: 1rem;
     margin-left: 1rem;
 }
 
 .coords div h5 {
+    font-size: inherit;
     color: #c4c4c4;
 }
 
 .coords div small {
+    font-size: inherit;
     color: #656565;
     font-weight: bold;
 }

@@ -10,24 +10,35 @@
 html {
   /* //1rem = 10px */
   min-height: 100vh;
-  font-size: 88%;
+  font-size: 90%;
   
-    @media only screen and (min-width: 81.25em) {
-      font-size: 70.5%; 
-      /* //1rem = 13.5px */
-    }
-  
-    @media only screen and (max-width: 29em) {
-      font-size: 48%; 
-      /* //1rem = 7.7px */
-    }
-  
-    @media only screen and (max-width: 25em) {
-      font-size: 40%; 
-      /* //1rem = 6.6px */
-    }
+}
+
+@media only screen and (min-width: 81.25em) {
+  html {
+    font-size: 80.5%; 
+
+  }
+  /* //1rem = 13.5px */
+}
+
+@media only screen and (max-width: 29em) {
+
+  html {
+
+    font-size: 48%; 
+  }
+  /* //1rem = 7.7px */
+}
+
+@media only screen and (max-width: 25em) {
+  html {
+    font-size: 40%; 
+
   }
 
+  /* //1rem = 6.6px */
+}
 
 body {
     position: relative;
@@ -35,7 +46,16 @@ body {
     box-sizing: border-box;
     margin: 3rem;
 
+
     /* margin: 3rem; */
   }
-
   
+  
+  
+  @media only screen and (max-width: 70em) {
+
+    body {
+      margin:1rem;
+
+    }
+  }

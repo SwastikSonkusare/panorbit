@@ -3,27 +3,17 @@ import Card from "./components/Card/Card";
 import Profile from "./screens/Profile/Profile";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// const App = () => {
-//   return (
-//     <>
-//       <Card></Card>
-//     </>
-//   );
-// };
-
-const Posts = () => {
-  return <div>Coming soon</div>;
-};
+import ComingSoon from "./components/ComingSoon/ComingSoon";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Card />} />
-        <Route path="/profile" exact element={<Profile />} />
-        <Route path="/posts" exact element={<Posts />} />
-        <Route path="/gallery" exact element={<Posts />} />
-        <Route path="/todo" exact element={<Posts />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/posts" element={<ComingSoon />} />
+        <Route path="/gallery" element={<ComingSoon />} />
+        <Route path="/todo" element={<ComingSoon />} />
       </Routes>
     </BrowserRouter>
   );

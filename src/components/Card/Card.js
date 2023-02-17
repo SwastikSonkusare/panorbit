@@ -19,6 +19,8 @@ const Card = () => {
     setLoading(false);
 
     setUser(users);
+
+    localStorage.setItem("Users", JSON.stringify(users));
   };
 
   useEffect(() => {

@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./Sidebar.css";
 
 const Sidebar = () => {
-  //   const navbarItems = ["Profile", "Posts", "Gallery", "ToDo"];
   const navigate = useNavigate();
   const navbarItems = [
     {
@@ -28,7 +27,6 @@ const Sidebar = () => {
       link: "/todo",
     },
   ];
-  //   const [isActive, setIsActive] = useState(false);
 
   const currentRoute = window.location.pathname;
 
@@ -46,7 +44,7 @@ const Sidebar = () => {
             key={item.id}
             onClick={() => onToggleMenu(item)}
           >
-            <a href="#">{item.name}</a>
+            <a href={item.link}>{item.name}</a>
             <div className={currentRoute === item.link ? "active" : ""}></div>
           </li>
         ))}
