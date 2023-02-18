@@ -6,6 +6,17 @@
   box-sizing: inherit;
 }
 
+:root {
+  --primary-color: #f6f6f6;
+  --primary-color-1: #c4c4c4;
+  --secondary-color: #6f6f6f;
+  --blue: #3b58c8;
+  --gray: #656565;
+
+  --white: white;
+}
+
+
 
 html {
   /* //1rem = 10px */
@@ -46,10 +57,7 @@ body {
     min-height: 100vh;
     box-sizing: border-box;
     margin: 3rem;
-
-
-    /* margin: 3rem; */
-  }
+}
   
   
   

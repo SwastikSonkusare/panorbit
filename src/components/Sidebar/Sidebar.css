@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #3b58c8;
+    background-color: var(--blue);
     border-radius: 1.2rem;
 }
 
@@ -33,7 +33,7 @@
 .navbar__items img.active {
     position: absolute;
     right: -1rem;
-    background-color: white;
+    background-color: var(--white);
     width: 25px;
     height: 25px;
     border-bottom-left-radius: 100%;
@@ -42,12 +42,13 @@
 }
 
 
-/* nav li.active {
-    background-color: #fefeff;
-   
-} */
-
 .navbar__items a {
+    color: #F0EEED;
+    text-decoration: none;
+
+}
+.navbar__items a.active {
+    font-weight: bold;
     color: #fefeff;
     text-decoration: none;
 
@@ -72,19 +73,4 @@
     .navbar__items:last-child {
         border: none;
     }
-
-
-
 }
-
-
-
-/* 
-.navbar__items div.active::after {
-    content: ">";
-    font-family: bold;
-    color: #cdd3df;
-    position: absolute;
-    top: .4rem;
-    right: 0;
-} */

@@ -4,8 +4,7 @@
     align-items: center;
     grid-gap: .5rem;
     width: 22rem;
-    background-color: white;
-    /* height: 20rem; */
+    background-color: var(--primary-color-1);
     position: absolute;
     top: 4rem;
     right: 0;
@@ -28,7 +27,7 @@
 
 .modal__btn {
     font-size: 1.5rem;
-    color: white;
+    color: var(--white);
     padding: 1rem 2rem;
     border: none;
     border-radius: 2rem;
@@ -36,7 +35,6 @@
     margin-top: auto;
     cursor: pointer;
 
-    /* box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%); */
     transition: all .4s ease-out;
 }
 
@@ -62,5 +60,5 @@
 }
 
 .modal__container div {
-    border-top: 1px solid #c4c4c4;
+    border-top: 1px solid var(--primary-color-1);
 }

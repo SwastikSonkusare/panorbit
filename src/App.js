@@ -1,8 +1,8 @@
 import React from "react";
-import Card from "./components/Card/Card";
-import Profile from "./screens/Profile/Profile";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Profile from "./screens/Profile/Profile";
+import Card from "./components/Card/Card";
 import ComingSoon from "./components/ComingSoon/ComingSoon";
 
 const App = () => {

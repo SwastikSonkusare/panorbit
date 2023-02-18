@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-
-import Map from "../../components/Map/Map";
-
 import { useJsApiLoader } from "@react-google-maps/api";
 
-import "./About.css";
+import Map from "../../components/Map/Map";
 import Modal from "../../components/Modal/Modal";
 import Chatbox from "../../components/Chatbox/Chatbox";
+import Navbar from "../../components/Navbar/Navbar";
+
+import "./About.css";
 
 const About = ({ data: { state } }) => {
   const [modalState, setModalState] = useState(false);
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyBAbKfObY_hR1hQWUaOvz-QsLmVLyn9uDo",
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_KEY,
   });
 
   const openModal = () => {
@@ -23,13 +23,7 @@ const About = ({ data: { state } }) => {
   return (
     <>
       <div className="about">
-        <nav className="about__nav">
-          <h2 className="about__heading">Profile</h2>
-          <div className="about__picture" onClick={openModal}>
-            <img src={state.profilepicture} alt=""></img>
-            <h3>{state.name}</h3>
-          </div>
-        </nav>
+        <Navbar openModal={openModal} state={state} />
         <div className="container">
           <div>
             <div className="user">
@@ -57,7 +51,6 @@ const About = ({ data: { state } }) => {
                   <small>{state.website}</small>
                 </div>
               </div>
-              {/* <div className="company"> */}
               <h2 className="subheading">Company</h2>
               <div className="user__details">
                 <div>
@@ -73,7 +66,6 @@ const About = ({ data: { state } }) => {
                   <small>{state.company.bs}</small>
                 </div>
               </div>
-              {/* </div> */}
             </div>
           </div>
           <div className="address">

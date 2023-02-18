@@ -15,16 +15,10 @@ const Chatbox = () => {
     setLoading(true);
 
     const usersData = JSON.parse(localStorage.getItem("Users"));
-    console.log(usersData);
 
     setLoading(false);
     setUsers(usersData);
   }, []);
-
-  const openChat = () => {
-    console.log("clicked");
-    setActive(!active);
-  };
 
   return (
     <>
@@ -39,10 +33,10 @@ const Chatbox = () => {
               src={!active ? arrow : downArrow}
               alt=""
               className={!active ? "chatbox__arrow" : "chatbox__arrow active"}
-              onClick={openChat}
+              onClick={() => setActive(!active)}
             ></img>
           </div>
-          {active && (
+          {active && !loading && (
             <div className="chatbox__list">
               {users.map((user, i) => (
                 <div key={i} className="person">

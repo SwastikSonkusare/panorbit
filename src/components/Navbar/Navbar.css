@@ -1,0 +1,35 @@
+.about__nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
+    border-bottom: 1px solid var(--primary-color-1);
+}
+
+.about__heading {
+    font-size: 1.5rem;
+    color: var(--gray);
+    font-family: bold;
+}
+
+.about__picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1rem;
+    cursor: pointer;
+}
+
+.about__picture img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.about__picture h3 {
+    color: var(--gray);
+    
+}

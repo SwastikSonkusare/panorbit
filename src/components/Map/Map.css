@@ -18,11 +18,11 @@
 
 .coords div h5 {
     font-size: inherit;
-    color: #c4c4c4;
+    color: var(--primary-color-1);
 }
 
 .coords div small {
     font-size: inherit;
-    color: #656565;
+    color: var(--gray);
     font-weight: bold;
 }

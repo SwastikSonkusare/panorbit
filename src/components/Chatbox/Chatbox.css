@@ -6,7 +6,7 @@
     align-items: center;
     width: 200px;
     margin: 2rem 0 0 auto;
-    background-color: #3b58c8;
+    background-color: var(--blue);
     border-top-left-radius: .7rem;
     border-top-right-radius: .7rem;
     
@@ -14,7 +14,7 @@
 
 .chatbox.active {
     flex-direction: column;
-    border: 2px solid #3b58c8;
+    border: 2px solid var(--blue);
 }
 
 .chatbox__container {
@@ -47,7 +47,7 @@
 
 .chatbox small {
     font-size: 1.2rem;
-    color: white;
+    color: var(--white);
 }
 
 
@@ -65,7 +65,7 @@
 .chatbox__list {
     width: 100%;
     height: 300px;
-    background-color: white;
+    background-color: var(--white);
     padding: .5rem;
     overflow-y: scroll;
 }

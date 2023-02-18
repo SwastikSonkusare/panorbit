@@ -21,8 +21,8 @@
     padding: 3rem 0;
     max-height: 18rem;
     width: 100%;
-    color: #6f6f6f;
-    background-color:#f6f6f6
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 
@@ -58,22 +58,12 @@
 }
 
 .person__name {
-    color: #6f6f6f;
+    color: var(--secondary-color);
 }
 
 
-
-/* svg {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-.container {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
-    vertical-align: middle;
-    overflow: hidden;
-  } */
+.loader {
+    font-size: 5rem;
+    color: var(--blue);
+    text-align: center;
+}

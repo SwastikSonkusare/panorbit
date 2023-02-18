@@ -32,10 +32,6 @@ const Sidebar = () => {
 
   const currentRoute = window.location.pathname;
 
-  const onToggleMenu = (item) => {
-    navigate(item.link);
-  };
-
   return (
     <nav className="navbar">
       <ul className="navbar__list">
@@ -43,15 +39,19 @@ const Sidebar = () => {
           <li
             className="navbar__items"
             key={item.id}
-            onClick={() => onToggleMenu(item)}
+            onClick={() => navigate(item.link)}
           >
-            <a href={item.link}>{item.name}</a>
+            <a
+              className={currentRoute === item.link ? "active" : ""}
+              href={item.link}
+            >
+              {item.name}
+            </a>
             <img
               src={currentRoute === item.link && uparrow}
               alt=""
               className={currentRoute === item.link ? "active" : ""}
             ></img>
-            {/* <div className={currentRoute === item.link ? "active" : ""}></div> */}
           </li>
         ))}
       </ul>
