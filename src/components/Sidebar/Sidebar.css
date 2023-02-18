@@ -34,8 +34,8 @@
     position: absolute;
     right: -1rem;
     background-color: var(--white);
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border-bottom-left-radius: 100%;
     border-top-left-radius: 100%;
     padding: 4px;
@@ -74,3 +74,20 @@
         border: none;
     }
 }
+
+
+
+@media only screen and (max-width: 29em) {
+    .navbar__items img.active {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width: 25em) {
+    .navbar__items img.active {
+        width: 17px;
+        height: 17px;
+    }
+}
+
