@@ -26,7 +26,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: .7rem ;
+    padding: 1rem;
 
 }
 
@@ -42,7 +42,6 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
-    /* transform: r; */
 }
 
 .chatbox small {
@@ -74,4 +73,6 @@
     width: 100%;
     border: none;
 }
+
+
 

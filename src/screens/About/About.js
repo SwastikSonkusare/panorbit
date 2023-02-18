@@ -8,7 +8,7 @@ import Navbar from "../../components/Navbar/Navbar";
 
 import "./About.css";
 
-const About = ({ data: { state } }) => {
+const About = ({ data: { state }, currentRoute }) => {
   const [modalState, setModalState] = useState(false);
 
   const { isLoaded } = useJsApiLoader({

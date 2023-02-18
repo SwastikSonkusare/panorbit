@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import { panorbitApi } from "../../assets/api";
+import wave from "../../assets/wave.svg";
 
 import "./Card.css";
 
@@ -28,7 +29,6 @@ const Card = () => {
   }, []);
 
   const profilePage = (d) => {
-    console.log("clicked");
     navigate("/profile", { state: d });
   };
 
