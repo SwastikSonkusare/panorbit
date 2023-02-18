@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+import uparrow from "../../assets/arrow.svg";
+
 import "./Sidebar.css";
 
 const Sidebar = () => {
@@ -31,7 +33,6 @@ const Sidebar = () => {
   const currentRoute = window.location.pathname;
 
   const onToggleMenu = (item) => {
-    console.log(item.link);
     navigate(item.link);
   };
 
@@ -45,7 +46,12 @@ const Sidebar = () => {
             onClick={() => onToggleMenu(item)}
           >
             <a href={item.link}>{item.name}</a>
-            <div className={currentRoute === item.link ? "active" : ""}></div>
+            <img
+              src={currentRoute === item.link && uparrow}
+              alt=""
+              className={currentRoute === item.link ? "active" : ""}
+            ></img>
+            {/* <div className={currentRoute === item.link ? "active" : ""}></div> */}
           </li>
         ))}
       </ul>

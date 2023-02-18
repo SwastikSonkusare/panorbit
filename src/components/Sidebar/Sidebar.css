@@ -28,14 +28,15 @@
     cursor: pointer;
 }
 
-.navbar__items div.active {
+.navbar__items img.active {
     position: absolute;
-    right: 0;
-    width: 25px;
+    right: -1rem;
     background-color: white;
-    height: 32px;
+    width: 25px;
+    height: 25px;
     border-bottom-left-radius: 100%;
     border-top-left-radius: 100%;
+    padding: 4px;
 }
 
 
@@ -49,7 +50,7 @@
     text-decoration: none;
 
 }
-
+/* 
 .navbar__items div.active::after {
     content: ">";
     font-family: bold;
@@ -57,4 +58,4 @@
     position: absolute;
     top: .4rem;
     right: 0;
-}
+} */

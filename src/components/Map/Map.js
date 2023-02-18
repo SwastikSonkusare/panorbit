@@ -22,11 +22,6 @@ const Map = ({ state }) => {
           <small>{state.address.geo.lng}</small>
         </div>
       </div>
-
-      <div className="chatbox">
-        <img></img>
-        <small>Chats</small>
-      </div>
     </>
   );
 };

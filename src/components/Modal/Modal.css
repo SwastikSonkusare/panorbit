@@ -53,6 +53,6 @@
     padding: 0.5rem 0 0 2rem ;
 }
 
-.modal__container div:not(:last-child) {
+.modal__container div {
     border-top: 1px solid #c4c4c4;
 }

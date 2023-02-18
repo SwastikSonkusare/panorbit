@@ -6,6 +6,7 @@ import { useJsApiLoader } from "@react-google-maps/api";
 
 import "./About.css";
 import Modal from "../../components/Modal/Modal";
+import Chatbox from "../../components/Chatbox/Chatbox";
 
 const About = ({ data: { state } }) => {
   const [modalState, setModalState] = useState(false);
@@ -96,6 +97,7 @@ const About = ({ data: { state } }) => {
               </div>
             </div>
             {!isLoaded ? "Map is loading" : <Map state={state} />}
+            <Chatbox />
           </div>
         </div>
       </div>
