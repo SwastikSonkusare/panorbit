@@ -30,31 +30,33 @@ const Chatbox = () => {
     <>
       <div className={active ? "chatbox active" : "chatbox "}>
         <div className="chatbox__container">
-          <div>
-            <img src={chatIcon} alt=""></img>
-            <small>Chats</small>
+          <div className="chatbox__menu">
+            <div>
+              <img src={chatIcon} alt=""></img>
+              <small>Chats</small>
+            </div>
+            <img
+              src={!active ? arrow : downArrow}
+              alt=""
+              className={!active ? "chatbox__arrow" : "chatbox__arrow active"}
+              onClick={openChat}
+            ></img>
           </div>
-          <img
-            src={!active ? arrow : downArrow}
-            alt=""
-            className={!active ? "chatbox__arrow" : "chatbox__arrow active"}
-            onClick={openChat}
-          ></img>
+          {active && (
+            <div className="chatbox__list">
+              {users.map((user, i) => (
+                <div key={i} className="person">
+                  <img
+                    src={user.profilepicture}
+                    alt=""
+                    className="person__image"
+                  ></img>
+                  <h4 className="person__name">{user.name}</h4>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
-        {active && (
-          <div className="chatbox__list">
-            {users.map((user, i) => (
-              <div key={i} className="person">
-                <img
-                  src={user.profilepicture}
-                  alt=""
-                  className="person__image"
-                ></img>
-                <h4 className="person__name">{user.name}</h4>
-              </div>
-            ))}
-          </div>
-        )}
       </div>
     </>
   );

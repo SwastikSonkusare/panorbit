@@ -7,7 +7,7 @@ const ComingSoon = () => {
   return (
     <div className="profile">
       <Sidebar />
-      Coming Soon
+      <div className="comingsoon">Coming Soon</div>
     </div>
   );
 };

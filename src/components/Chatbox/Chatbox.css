@@ -1,4 +1,6 @@
 .chatbox {
+    position: absolute;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,6 +18,10 @@
 }
 
 .chatbox__container {
+    width: 100%;
+}
+
+.chatbox__menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +30,7 @@
 
 }
 
-.chatbox__container div {
+.chatbox__menu div {
     
     display: flex;
     align-items: center;

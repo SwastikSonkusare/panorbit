@@ -11,6 +11,7 @@ html {
   /* //1rem = 10px */
   min-height: 100vh;
   font-size: 90%;
+  font-family: 'Heebo', sans-serif;
   
 }
 

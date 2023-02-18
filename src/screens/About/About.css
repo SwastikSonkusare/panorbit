@@ -41,6 +41,9 @@
     /* grid-gap: 1rem; */
 }
 
+
+
+
 .user {
     margin-left: 2rem;
 }
@@ -73,6 +76,8 @@
 .user__details {
     width: 26rem;
 }
+
+
 
  .user__details:nth-child() {
 
@@ -108,14 +113,44 @@
 
 
 .address {
+    position: relative;
     padding-left: 2rem;
     border-left: 1px solid #c4c4c4;
     /* margin-left: auto; */
 }
 
+
+
 .address__container {
     margin: 1rem 0 0 3.5rem;
 }
+
+
+
+/* MEDIA QUERIES FOR RESPONSIVENSS */
+
+@media only screen and (max-width: 60.25em) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .user__details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    }
+
+    .address {
+        text-align: center;
+        border: none;
+    }
+
+    .address__container {
+        margin: 1rem auto;
+    }
+}
+
+
 
 
 
