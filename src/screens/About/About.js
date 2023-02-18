@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useJsApiLoader } from "@react-google-maps/api";
 
 import Map from "../../components/Map/Map";
@@ -11,6 +11,8 @@ import "./About.css";
 const About = ({ data: { state }, currentRoute }) => {
   const [modalState, setModalState] = useState(false);
 
+  let menuRef = useRef();
+
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_KEY,
@@ -19,6 +21,14 @@ const About = ({ data: { state }, currentRoute }) => {
   const openModal = () => {
     setModalState(!modalState);
   };
+
+  if (modalState) {
+    document.addEventListener("mousedown", (e) => {
+      if (!menuRef.current?.contains(e.target)) {
+        setModalState(!modalState);
+      }
+    });
+  }
 
   return (
     <>
@@ -93,7 +103,7 @@ const About = ({ data: { state }, currentRoute }) => {
           </div>
         </div>
       </div>
-      {modalState && <Modal state={state} />}
+      {modalState && <Modal state={state} menuRef={menuRef} />}
     </>
   );
 };

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./Modal.css";
 
-const Modal = ({ state }) => {
+const Modal = ({ state, menuRef }) => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState();
 
@@ -10,16 +10,13 @@ const Modal = ({ state }) => {
     setLoading(true);
 
     const usersData = JSON.parse(localStorage.getItem("Users"));
-    console.log(usersData);
 
     setLoading(false);
     setUsers(usersData);
   }, []);
 
-  console.log(users);
-
   return (
-    <div className="modal">
+    <div className="modal" ref={menuRef}>
       <img src={state.profilepicture} alt=""></img>
       <h4 className="user__name">{state.name}</h4>
       <h4 className="subheading">{state.email}</h4>
